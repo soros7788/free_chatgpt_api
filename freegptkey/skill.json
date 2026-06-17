@@ -1,0 +1,126 @@
+{
+  "name": "freegptkey",
+  "version": "1.0.0",
+  "displayName": "免费 GPT API 技能",
+  "description": "使用 free_chatgpt_api 提供的免费 API KEY，通过标准 OpenAI 接口调用 gpt-4o-mini、gpt-3.5-turbo、dall-e-2、whisper-1 等模型。完全免费，无需代理。",
+  "author": "free-chatgpt-api",
+  "homepage": "https://github.com/popjane/free_chatgpt_api",
+  "keywords": [
+    "gpt",
+    "free-api",
+    "chatgpt",
+    "openai",
+    "dall-e",
+    "whisper",
+    "ai",
+    "llm",
+    "mcp"
+  ],
+  "tags": [
+    "free",
+    "gpt",
+    "image-generation",
+    "chat",
+    "code-assistant"
+  ],
+  "category": "ai-tools",
+  "license": "MIT",
+  "type": "mcp-server",
+  "runtime": "node",
+  "entryPoint": "index.js",
+  "command": "node",
+  "args": [
+    "index.js"
+  ],
+  "api": {
+    "baseUrl": "https://free.v36.cm",
+    "apiUrl": "https://free.v36.cm/v1",
+    "keyGetUrl": "https://free.v36.cm/github",
+    "rateLimit": 96
+  },
+  "capabilities": {
+    "chat": true,
+    "imageGeneration": true,
+    "speechToText": true,
+    "webSearch": true
+  },
+  "models": {
+    "free": [
+      "gpt-4o-mini",
+      "gpt-3.5-turbo-0125",
+      "gpt-3.5-turbo-1106",
+      "gpt-3.5-turbo",
+      "gpt-3.5-turbo-16k",
+      "net-gpt-3.5-turbo",
+      "whisper-1",
+      "dall-e-2"
+    ],
+    "chat": [
+      "gpt-4o-mini",
+      "gpt-3.5-turbo-0125",
+      "gpt-3.5-turbo-1106",
+      "gpt-3.5-turbo",
+      "gpt-3.5-turbo-16k",
+      "net-gpt-3.5-turbo"
+    ],
+    "image": [
+      "dall-e-2"
+    ],
+    "audio": [
+      "whisper-1"
+    ]
+  },
+  "environment": [
+    {
+      "name": "FREE_GPT_API_KEY",
+      "description": "免费 GPT API KEY，通过 https://free.v36.cm/github 领取",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "tools": [
+    {
+      "name": "get_key_guide",
+      "description": "获取免费 API KEY 领取指引",
+      "category": "setup"
+    },
+    {
+      "name": "validate_key",
+      "description": "验证 API KEY 是否有效",
+      "category": "setup"
+    },
+    {
+      "name": "list_models",
+      "description": "列出可用模型列表",
+      "category": "info"
+    },
+    {
+      "name": "chat",
+      "description": "标准 OpenAI 聊天补全 (Chat Completions)",
+      "category": "chat"
+    },
+    {
+      "name": "quick_chat",
+      "description": "简化版聊天，快速单轮对话",
+      "category": "chat"
+    },
+    {
+      "name": "generate_image",
+      "description": "使用 dall-e-2 生成图像",
+      "category": "image"
+    },
+    {
+      "name": "get_api_info",
+      "description": "获取 API 完整配置信息",
+      "category": "info"
+    }
+  ],
+  "quickStart": {
+    "step1": "访问 https://free.v36.cm/github 领取免费 API KEY",
+    "step2": "设置环境变量 export FREE_GPT_API_KEY=你的KEY",
+    "step3": "进入 freegptkey 目录: cd freegptkey",
+    "step4": "安装依赖: npm install",
+    "step5": "启动 MCP 服务器: npm start 或 node index.js"
+  },
+  "createdAt": "2026-06-17"
+}
