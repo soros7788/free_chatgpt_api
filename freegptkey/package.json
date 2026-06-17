@@ -1,0 +1,20 @@
+{
+  "name": "freegptkey",
+  "version": "1.0.0",
+  "description": "Free GPT API MCP server - 使用 free_chatgpt_api 提供的免费 ChatGPT API 服务",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "freegptkey": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "inspect": "node --inspect index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

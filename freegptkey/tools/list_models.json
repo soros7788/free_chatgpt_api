@@ -1,0 +1,18 @@
+{
+  "name": "list_models",
+  "description": "列出 API 支持的可用模型列表",
+  "arguments": {
+    "properties": {
+      "api_key": {
+        "type": "string",
+        "description": "免费 GPT API KEY。"
+      },
+      "free_only": {
+        "type": "boolean",
+        "description": "是否只显示免费可用的模型（默认 true）",
+        "default": true
+      }
+    },
+    "type": "object"
+  }
+}

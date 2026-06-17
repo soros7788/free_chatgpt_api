@@ -1,0 +1,28 @@
+{
+  "name": "generate_image",
+  "description": "使用 dall-e-2 模型生成图像",
+  "arguments": {
+    "properties": {
+      "api_key": {
+        "type": "string",
+        "description": "免费 GPT API KEY。"
+      },
+      "prompt": {
+        "type": "string",
+        "description": "图像描述文本（英文效果更好）"
+      },
+      "size": {
+        "type": "string",
+        "description": "图像尺寸: 256x256, 512x512, 或 1024x1024（默认 512x512）",
+        "default": "512x512"
+      },
+      "n": {
+        "type": "number",
+        "description": "生成图像数量（默认 1）",
+        "default": 1
+      }
+    },
+    "required": ["prompt"],
+    "type": "object"
+  }
+}

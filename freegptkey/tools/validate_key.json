@@ -1,0 +1,13 @@
+{
+  "name": "validate_key",
+  "description": "验证提供的 API KEY 是否有效（通过调用 /models 接口）",
+  "arguments": {
+    "properties": {
+      "api_key": {
+        "type": "string",
+        "description": "免费 GPT API KEY。如果省略则尝试从 FREE_GPT_API_KEY 环境变量读取。"
+      }
+    },
+    "type": "object"
+  }
+}

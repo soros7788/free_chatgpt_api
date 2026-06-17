@@ -1,0 +1,40 @@
+{
+  "name": "chat",
+  "description": "发送聊天补全请求。标准 OpenAI Chat Completions 接口，支持 gpt-4o-mini、gpt-3.5-turbo 等模型。",
+  "arguments": {
+    "properties": {
+      "api_key": {
+        "type": "string",
+        "description": "免费 GPT API KEY。"
+      },
+      "model": {
+        "type": "string",
+        "description": "模型名称，例如 gpt-4o-mini, gpt-3.5-turbo, net-gpt-3.5-turbo",
+        "default": "gpt-3.5-turbo"
+      },
+      "messages": {
+        "type": "array",
+        "description": "消息数组，每条消息包含 role (system/user/assistant) 和 content 字段。",
+        "items": {
+          "type": "object",
+          "properties": {
+            "role": { "type": "string" },
+            "content": { "type": "string" }
+          }
+        }
+      },
+      "temperature": {
+        "type": "number",
+        "description": "采样温度，0-2 之间，值越高越随机（默认 0.7）",
+        "default": 0.7
+      },
+      "max_tokens": {
+        "type": "number",
+        "description": "最大生成 token 数（默认 2048）",
+        "default": 2048
+      }
+    },
+    "required": ["messages"],
+    "type": "object"
+  }
+}

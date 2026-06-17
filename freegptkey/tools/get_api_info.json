@@ -1,0 +1,8 @@
+{
+  "name": "get_api_info",
+  "description": "获取 Free GPT API 的完整配置信息、可用模型和使用限制",
+  "arguments": {
+    "properties": {},
+    "type": "object"
+  }
+}

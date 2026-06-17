@@ -1,0 +1,38 @@
+{
+  "name": "quick_chat",
+  "description": "简化版聊天：只需提供 prompt，即可快速获得回复",
+  "arguments": {
+    "properties": {
+      "api_key": {
+        "type": "string",
+        "description": "免费 GPT API KEY。"
+      },
+      "prompt": {
+        "type": "string",
+        "description": "用户输入的问题或对话内容"
+      },
+      "model": {
+        "type": "string",
+        "description": "模型名称（默认 gpt-4o-mini）",
+        "default": "gpt-4o-mini"
+      },
+      "system_prompt": {
+        "type": "string",
+        "description": "系统提示词（默认 'You are a helpful assistant.'）",
+        "default": "You are a helpful assistant."
+      },
+      "temperature": {
+        "type": "number",
+        "description": "采样温度（默认 0.7）",
+        "default": 0.7
+      },
+      "max_tokens": {
+        "type": "number",
+        "description": "最大生成 token 数（默认 2048）",
+        "default": 2048
+      }
+    },
+    "required": ["prompt"],
+    "type": "object"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "get_key_guide",
+  "description": "获取免费 GPT API KEY 的领取指引和使用说明",
+  "arguments": {
+    "properties": {},
+    "type": "object"
+  }
+}
